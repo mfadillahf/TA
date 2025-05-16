@@ -16,10 +16,10 @@ return new class extends Migration
             $table->unsignedBigInteger('id_donatur');
             $table->integer('nominal');
             $table->timestamp('tanggal');
-            $table->char('keterangan', 50);
+            $table->char('keterangan', 50)->nullable();
             $table->timestamps();
 
-            $table->foreign('id_donatur')->references('id_donatur')->on('donatur')->onDelete('cascade');
+            $table->foreign('id_donatur')->references('id_donatur')->on('donaturs')->onDelete('cascade');
         });
     }
 

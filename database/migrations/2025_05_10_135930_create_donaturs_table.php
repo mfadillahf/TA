@@ -15,12 +15,12 @@ return new class extends Migration
             $table->id('id_donatur');
             $table->unsignedBigInteger('id_user');
             $table->char('nama', 50);
-            $table->string('alamat', 255);
+            $table->string('alamat', 255)->nullable();
             $table->char('no_telepon', 14);
-            $table->char('email', 50);
+            $table->char('email', 50)->nullable();
             $table->timestamps();
 
-            $table->foreign('id_user')->references('id_user')->on('user')->onDelete('cascade');
+            $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade');
         });
     }
 

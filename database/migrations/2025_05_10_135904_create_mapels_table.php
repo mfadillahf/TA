@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id('id_mapel');
             $table->unsignedBigInteger('id_guru');
             $table->char('mapel', 50);
-            $table->string('deskripsi', 255);
+            $table->string('deskripsi', 255)->nullable();
             $table->timestamps();
 
-            $table->foreign('id_guru')->references('id_guru')->on('guru')->onDelete('cascade');
+            $table->foreign('id_guru')->references('id_guru')->on('gurus')->onDelete('cascade');
         });
     }
 

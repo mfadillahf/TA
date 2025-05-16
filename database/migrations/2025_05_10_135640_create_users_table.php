@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('password', 255);
             $table->timestamps();
 
-            $table->foreign('id_jenis_user')->reference('id_jenis_user')->on('jenis_user')->onDelete('cascade');
+            $table->foreign('id_jenis_user')->references('id_jenis_user')->on('jenis_users')->onDelete('cascade');
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

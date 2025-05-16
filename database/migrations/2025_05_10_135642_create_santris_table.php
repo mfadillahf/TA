@@ -19,8 +19,8 @@ return new class extends Migration
             $table->char('nama_panggil', 50);
             $table->date('tanggal_lahir');
             $table->string('alamat', 255);
-            $table->char('no_telepon', 14);
-            $table->char('email', 50);
+            $table->char('no_telepon', 14)->nullable();
+            $table->char('email', 50)->nullable();
             $table->char('jenis_kelamin', 10);
             $table->char('status', 10);
             $table->char('pendidikan_asal', 50);
@@ -32,7 +32,7 @@ return new class extends Migration
             $table->char('no_hp_ibu', 14);
             $table->timestamps();
 
-            $table->foreign('id_user')->references('id_user')->on('user')->onDelete('cascade');
+            $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade');
             $table->foreign('id_kelas')->references('id_kelas')->on('kelas')->onDelete('cascade');
         });
     }

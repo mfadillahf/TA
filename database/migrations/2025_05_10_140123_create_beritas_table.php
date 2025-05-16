@@ -18,11 +18,11 @@ return new class extends Migration
             $table->char('judul', 50);
             $table->text('isi');
             $table->date('tanggal');
-            $table->char('foto', 20);
+            $table->char('foto', 20)->nullable();
             $table->timestamps();
 
             $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade');
-            $table->foreign('id_jenis_berita')->references('id_jenis_berita')->on('jenis_berita')->onDelete('cascade');
+            $table->foreign('id_jenis_berita')->references('id_jenis_berita')->on('jenis_beritas')->onDelete('cascade');
         });
     }
 

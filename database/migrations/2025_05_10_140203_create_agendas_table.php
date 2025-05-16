@@ -16,10 +16,10 @@ return new class extends Migration
             $table->unsignedBigInteger('id_jenis_agenda');
             $table->char('judul', 50);
             $table->date('tanggal');
-            $table->string('deskripsi', 255);
+            $table->string('deskripsi', 255)->nullable();
             $table->timestamps();
 
-            $table->foreign('id_jenis_agenda')->references('id_jenis_agenda')->on('jenis_agenda')->onDelete('cascade');
+            $table->foreign('id_jenis_agenda')->references('id_jenis_agenda')->on('jenis_agendas')->onDelete('cascade');
         });
     }
 

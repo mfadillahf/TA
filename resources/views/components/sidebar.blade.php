@@ -106,6 +106,16 @@
             </a>
           </li>
 
+          <li class="nav-header">Keuangan</li>
+          <li class="nav-item">
+            <a href="{{ route('infaq') }}" class="nav-link">
+              <i class="nav-icon bi bi-box-seam-fill"></i>
+              <p>
+                Infaq
+              </p>
+            </a>
+          </li>
+
           <li class="nav-header">Sistem</li>
           <li class="nav-item">
             <a href="#" class="nav-link">

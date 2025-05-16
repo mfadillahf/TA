@@ -19,8 +19,8 @@ return new class extends Migration
             $table->char('tahun_ajaran', 10);
             $table->timestamps();
 
-            $table->foreign('id_mapel')->references('id_mapel')->on('mapel')->onDelete('cascade');
-            $table->foreign('id_santri')->references('id_santri')->on('santri')->onDelete('cascade');
+            $table->foreign('id_mapel')->references('id_mapel')->on('mapels')->onDelete('cascade');
+            $table->foreign('id_santri')->references('id_santri')->on('santris')->onDelete('cascade');
         });
     }
 

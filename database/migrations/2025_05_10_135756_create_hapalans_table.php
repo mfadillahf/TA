@@ -18,8 +18,8 @@ return new class extends Migration
             $table->text('keterangan');
             $table->timestamps();
 
-            $table->foreign('id_santri')->references('id_santri')->on('santri')->onDelete('cascade');
-            $table->foreign('id_guru')->references('id_guru')->on('guru')->onDelete('cascade');
+            $table->foreign('id_santri')->references('id_santri')->on('santris')->onDelete('cascade');
+            $table->foreign('id_guru')->references('id_guru')->on('gurus')->onDelete('cascade');
         });
     }
 

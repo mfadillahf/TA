@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->char('judul', 50);
             $table->text('deskripsi');
-            $table->char('no_telp', 14);
+            $table->char('no_telp', 14)->nullable();
             $table->text('alamat');
-            $table->char('email', 50);
+            $table->char('email', 50)->nullable();
             $table->timestamps();
         });
     }
